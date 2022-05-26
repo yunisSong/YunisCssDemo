@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航栏</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    /*清除浮动的影响*/
+    .cl{
+        clear: both;
+    }
+    .header {
+      background-color: #191d3a;
+      height: 58px;
+
+    }
+    .inner_c {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .inner_c .logo img {
+      width: 200px;
+      height: 40px;
+      float: left;
+      margin-top: 9px;
+    }
+    .inner_c .nav {
+      float: left;
+    }
+    .header .nav ul{
+      list-style: none; /*去掉列表前面的圆点*/
+    }
+    .header .nav ul li{
+      float: left;
+      width: 100px;
+      line-height: 58px;
+      text-align: center;
+      color: #e2e4ed;
+      font-weight: 400;
+    }
+    .header .nav ul li:hover{
+      background-color: #252947;
+      color: white;
+      font-weight: 700;
+    }
+    .header .nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .header .jrwm_box .jrwm{
+      float: right;
+      color: white;
+      line-height: 32px;
+      margin-top: 13px;
+      background-color: #38b774;
+      border-radius: 3px;
+      width: 110px;
+      text-align: center;
+
+    }
+    .header .jrwm_box .jrwm a {
+      color: white;
+      text-decoration: none;
+
+    }
+
+    .banner {
+      background-color: yellow;
+      height: 465px;
+    }
+
+    .content{
+        width: 1000px;
+        margin: 50px auto;
+        height: 298px;
+        padding-left: 16px;
+    }
+    .content .ul .li {
+      float: left;
+      background-color: yellow;
+      width: 218px;
+      margin-right: 32px;
+    }
+   
+    .content .ul .li img {
+      width: 218px;
+      height: 218px;
+      display: block;
+    } 
+    .content .ul .li a {
+      width: 218px;
+      height: 40px;
+      display: block;
+      text-align: center;
+    } 
+    .content .ul .li .test .buy1 {
+      display: inline-block;
+    }
+    .right {
+      float: right;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-left-color: red;
+      border-right: none;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <div class="inner_c">
+        <div class="logo">
+            <img src="images/logo.png " alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#" class="current">首页</a></li>
+                <li><a href="#">博雅游戏</a></li>
+                <li><a href="#">博雅新闻</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">客服中心</a></li>
+                <li class="last"><a href="#">投资者关系</a></li>
+            </ul>
+        </div>
+        <div class="jrwm_box">
+            <div class="jrwm">
+                <a href="https://www.google.com/" target="_blank">加入我们</a>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+    <div class="banner">
+
+    </div>
+    <div class="content">
+        <div class="ul">
+          <div class="li">
+            <img src="" alt="">
+            <a href="" class="title">点击事件</a>
+            <a href="" class="buy">buy</a>
+          </div>
+          <div class="li">
+            <img src="" alt="">
+            <a href="" class="title">点击事件</a>
+            <a href="" class="buy">buy</a>
+          </div>
+          <div class="li">
+            <img src="" alt="">
+            <a href="" class="title">点击事件</a>
+            <a href="" class="buy">buy</a>
+          </div>
+          <div class="li">
+            <img src="" alt="">
+            <a href="" class="title">点击事件</a>
+            <div class="test">
+              <a href="" class="buy1">点击播放</a>
+              <div class="right"></div>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+.top {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+.nav {
+  line-height: 20px;
+}
+.nav .address p {
+  line-height: 20px;
+}
+.nav .address {
+  float: left;
+}
+.menu ul {
+  float: right;
+}
+.menu li {
+  float: left;
+  width: 100px;
+  background-color: antiquewhite;
+  text-align: center;
+  border-right: 1px slateblue solid;
+  line-height: 14px;
+  margin-top: 3px;
+}
+.menu li:hover {
+  color: black;
+  background-color: aliceblue;
+}

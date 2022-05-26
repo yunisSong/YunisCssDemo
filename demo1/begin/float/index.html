@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+</head>
+<style>
+  .folat {
+    width: 500px;
+    height: 500px;
+    background-color: brown;
+  }
+.box1 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box2 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+}
+.box3 {
+  background-color: green;
+  width: 300px;
+  height: 300px;
+}
+.box4 {
+  float: right;
+  background-color: green;
+  width: 200px;
+  height: 300px;
+}
+.out {
+  background-color: yellow;
+  width: 300px;
+  height: 300px;
+}
+</style>
+<body>
+  <div class="folat">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <!-- 因为前两个使用了 float ，脱离了标准文档流， box3成为了布局的第一个元素，所以 box3 会和box1 box2 重复-->
+    <div class="box3"></div>
+  </div>
+
+  <div class="out"></div>
+
+  <div class="folat">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box4"></div>
+  </div>
+  
+</body>
+</html>

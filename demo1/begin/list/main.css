@@ -1,0 +1,43 @@
+.cb {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ib {
+  display: inline-block;
+}
+
+.tac {
+  text-align: center;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.dn {
+  display: none;
+}
+/* 其他字体同理 */
+.fz-18 {
+  font-size: 18px;
+}
+
+.fw {
+  font-weight: bold;
+}
+
+.sel {
+  
+}

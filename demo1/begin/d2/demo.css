@@ -1,0 +1,36 @@
+h1 {
+  display: block;
+  background-color: yellow;
+  line-height: 100%;
+  text-align: center;
+}
+
+p {
+  /* 字体大小 */
+  font-size: 50px;
+  /* 行高 */
+  line-height: 70px;
+  /* 字体类型 */
+  font-family: 幼圆;
+  /* 是否是斜体 */
+  font-style: italic;
+  /* 粗体 */
+  font-weight: bold;
+  /* 小写变大写 */
+  font-variant: small-caps;
+  background-color: red;
+}
+div {
+  text-align: center;
+  background-color: green;
+
+
+}
+
+div > p {
+  display: inline-block;
+  background-color: yellow;
+  line-height: 100%;
+
+
+}
