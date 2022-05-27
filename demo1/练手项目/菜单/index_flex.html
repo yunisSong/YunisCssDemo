@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> menu flex</title>
+  <style>
+    .wrapper {
+      padding: 8px;
+      margin: 0 auto;
+      width: 800px;
+      background-color: antiquewhite;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wrapper1 {
+      padding: 8px;
+      padding-top: 0;
+      margin: 0 auto;
+      width: 800px;
+      background-color: antiquewhite;
+      display: flex;
+      justify-content: space-between;
+    }
+    .goodItem {
+      flex:1;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      margin-left: 8px;
+      margin-top: 0px;
+    }
+
+    .goodItem:nth-child(1) {
+      margin-left: 0;
+    }
+    .goodItem {
+      transition: all 0.35s linear 0s;
+    }
+    .goodItem:hover {
+      transform: scale(1.05, 1.05) ;
+    }
+    .item-good-pic {
+      width: 100%;
+      /* height: auto; */
+      height: calc(100% - 30px);
+    }
+    .item-good-title {
+      position: absolute;
+      width: 100%;
+      margin-left: -100%;
+      bottom: 0;
+      line-height: 30px;
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+
+  </div>
+  <div class="wrapper1">
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+    <div class="goodItem">
+      <img class="item-good-pic" src="../1.jpg" alt="">
+      <span class="item-good-title">标题</span>
+    </div>
+
+  </div>
+</body>
+</html>
