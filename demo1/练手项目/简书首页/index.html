@@ -6,44 +6,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>简书</title>
   <style>
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      background-color: antiquewhite;
-      height: 500px;
+    * {
+      margin: 0;
+      padding: 0;
     }
-    .leftItem {
-      /* 父视图 代表一个单元格 */
-      float: left;
+    .wrapper {
+        margin: 90px auto;
+        padding: 15px;
+        width: 800px;
+        position: relative;
+        border: #444 1px solid;
+        border-radius: 15px;
+        overflow: hidden;
+    }
 
-      background-color: aqua;
-      height: 100px;
-    }
     .left {
-      width: 70%;
-      background-color: aqua;
+      display: inline-block;
+      width: 80%;
+    }
+    .left .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+    }
+    .left .content {
+      font-size: 14px;
+      margin-top: 15px;
+      color: #555;
+    }
+    .left .bottom {
+      margin: 0;
+      margin-top: 15px;
+      height: 30px;
+    }
+    .imgicon {
+      float: left;
+      color: #666;
+
+    }
+
+    .imgicon img {
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      overflow: hidden;
+    }
+    .imgicon span {
+      display: inline-block;
+      width: 50px;
+      line-height: 100%;
+      font-size: 12px;
       
     }
-    .all {
-      width: 100%;
+
+    .imgicon:hover {
+      color: black;
     }
+
+    .right {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      /* display: inline-block; */
+      width: 20%;
+      overflow: hidden;
+
+    }
+    .right img {
+      width: 100%;
+      line-height: 100%;
+    }
+    
 
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="leftItem">
-      <div class="leftContent left">
-       <div class="title"></div>
-       <div class="content"></div>
-       <div class="bottomInfo"></div>
-      </div>
-      <div class="rightImage">
-   
-      </div>
+ <div class="wrapper">
+   <div class="left">
+     <p class="title">标题洒洒地方</p>
+     <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam sunt repellendus distinctio quod necessitatibus.</p>
+     <div class="bottom">
+       <div class="imgicon redColor">
+         <img src="../1.jpg" alt="">
+        <span>作者</span>
+       </div>
+       <div class="imgicon">
+         <img src="../1.jpg" alt="">
+        <span>106</span>
+       </div>
+       <div class="imgicon">
+         <img src="../1.jpg" alt="">
+        <span>398</span>
+       </div>
+       
      </div>
-  </div>
-  
+   </div>
+   <div class="right">
+     <img src="../1.jpg" alt="">
+   </div>
+ </div>
 
 </body>
 </html>
