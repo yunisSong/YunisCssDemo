@@ -45,11 +45,15 @@
 
     }
 
-    .imgicon img {
+    .imgicon .img {
+      display: inline-block;
       vertical-align: middle;
-      width: 25px;
+      width: 15px;
       height: 25px;
       overflow: hidden;
+      /* background: url(../1.jpg) 0 50% no-repeat; */
+      background: url(https://i1.sinaimg.cn/dy/deco/2013/0313/videoNewsLeft.gif) 0 50% no-repeat;
+
     }
     .imgicon span {
       display: inline-block;
@@ -73,9 +77,21 @@
       overflow: hidden;
 
     }
-    .right img {
+    .right .img {
       width: 100%;
       line-height: 100%;
+      background: url(../1.jpg) 0 50% no-repeat;
+
+    }
+    .cl {
+      clear: both;
+    }
+    .test {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      background: url(https://i1.sinaimg.cn/dy/deco/2013/0313/videoNewsLeft.gif) 0 50% no-repeat;
+
     }
     
 
@@ -88,15 +104,15 @@
      <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam sunt repellendus distinctio quod necessitatibus.</p>
      <div class="bottom">
        <div class="imgicon redColor">
-         <img src="../1.jpg" alt="">
+         <div class="img" alt=""></div>
         <span>作者</span>
        </div>
        <div class="imgicon">
-         <img src="../1.jpg" alt="">
+         <div class="img" alt=""></div>
         <span>106</span>
        </div>
        <div class="imgicon">
-         <img src="../1.jpg" alt="">
+         <div class="img" alt=""></div>
         <span>398</span>
        </div>
        
@@ -105,7 +121,10 @@
    <div class="right">
      <img src="../1.jpg" alt="">
    </div>
+   <div class="cl"></div>
+
  </div>
+ <div class="test"></div>
 
 </body>
 </html>
