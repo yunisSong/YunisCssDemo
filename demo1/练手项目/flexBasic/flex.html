@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    .container {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      background-color: antiquewhite;
+      height: 150px;
+
+    }
+    .container1 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+      /* flex-end flex-start */
+      justify-content: center;
+
+    }
+
+    .container2 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+      justify-content: space-between;
+
+    }
+    .container3 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+      justify-content: space-evenly;
+
+    }
+
+    .container4 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+
+    }
+    .container4 .logout {
+      margin-left: auto;
+    }
+
+    .container5 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+
+    }
+
+    .container5 .search {
+        margin-left: auto;
+    }
+    /* div {
+      flex: 1;
+    } */
+    .container6 {
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+      background-color: antiquewhite;
+      height: 150px;
+    }
+    .container6 .home {
+      flex: 1;
+    }
+    .container6 .search {
+      flex: 2;
+    }
+    .container6 .logout {
+      flex: 3;
+    }
+
+    .home {
+      background-color: aqua;
+
+    }
+    .search {
+      background-color: greenyellow;
+    }
+    .logout {
+      background-color: rosybrown;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <nav class="container">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container1">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container2">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container3">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container4">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container5">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+
+  <nav class="container6">
+    <div class="home">Home</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </nav>
+</body>
+</html>
