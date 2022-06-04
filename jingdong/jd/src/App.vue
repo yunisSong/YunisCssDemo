@@ -16,7 +16,40 @@
     <div class="banner">
       <img class="banner__img" src="http://www.dell-lee.com/imgs/vue3/banner.jpg" alt="" >
     </div>
-    <div>12222</div>
+    <div class="goods">
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">图书</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">帽子</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">运动鞋</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">哈哈</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">共同体</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">按时</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">梵蒂冈</div>
+      </div>
+      <div class="goods__item">
+        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="title">通天塔</div>
+      </div>
+    </div>
   </div>
   <div class="docker">
     <div class="docker__item docker__item--active">
@@ -100,6 +133,30 @@
   padding-bottom: 25.4%;
   &__img {
     width: 100%;
+  }
+}
+
+.goods {
+  display: grid;
+  grid-template-columns:  25% 25% 25% 25%;
+  grid-template-rows: 100px 100px 100px 100px;
+  width: 100%;
+  &__item {
+    // height: 0;
+    // overflow: hidden;
+    // padding-bottom: 25.4%;
+    overflow: hidden;
+    padding: .16rem .16rem;
+
+    &__img {
+      width: 100%;
+    }
+    .title {
+      text-align: center;
+      font-size: .16rem;
+      color: $content-fontcolor;
+      @include ellipsis;
+    }
   }
 }
 
