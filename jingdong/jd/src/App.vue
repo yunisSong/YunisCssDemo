@@ -18,36 +18,111 @@
     </div>
     <div class="goods">
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">图书</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">帽子</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">运动鞋</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">哈哈</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">共同体</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">按时</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">梵蒂冈</div>
       </div>
       <div class="goods__item">
-        <div class="img"><img class="goods__item__img" src="./assets/1.jpg" alt="" ></div>
+        <div class="img"><img class="goods__item__img" src="http://www.dell-lee.com/imgs/vue3/超市.png" alt="" ></div>
         <div class="title">通天塔</div>
+      </div>
+    </div>
+    <div class="nearby">
+      <h3>附近商家</h3>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
+      </div>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
+      </div>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
+      </div>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
+      </div>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
+      </div>
+      <div class="nearby__item">
+        <div class="nearby__item__img"><img src="http://www.dell-lee.com/imgs/vue3/超市.png" alt=""></div>
+        <div class="nearby__item__content">
+          <div class="nearby__item__content__title">沃尔玛</div>
+          <div class="nearby__item__content__tags">
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+            <span class="nearby__item__content__tag">月售1万+</span>
+          </div>
+          <div class="nearby__item__content__highlight">VIP尊享沙拉酱看到发票离开家士大夫</div>
+        </div>
       </div>
     </div>
   </div>
@@ -82,6 +157,7 @@
   bottom: .5rem;
   font-size: .12rem;
   padding: .08rem .18rem;
+  overflow-y: auto;
 
 }
 .position {
@@ -131,31 +207,105 @@
   height: 0;
   overflow: hidden;
   padding-bottom: 25.4%;
+  margin-bottom: .16rem;
   &__img {
     width: 100%;
   }
 }
 
+// .goods {
+//   display: grid;
+//   grid-template-columns:  25% 25% 25% 25%;
+//   grid-template-rows: 100px 100px 100px 100px;
+//   width: 100%;
+//   &__item {
+//     // height: 0;
+//     // overflow: hidden;
+//     // padding-bottom: 25.4%;
+//     overflow: hidden;
+//     padding: .16rem .16rem;
+
+//     &__img {
+//       width: 100%;
+//     }
+//     .title {
+//       text-align: center;
+//       font-size: .16rem;
+//       color: $content-fontcolor;
+//       @include ellipsis;
+//     }
+//   }
+// }
+
 .goods {
-  display: grid;
-  grid-template-columns:  25% 25% 25% 25%;
-  grid-template-rows: 100px 100px 100px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
   width: 100%;
   &__item {
-    // height: 0;
-    // overflow: hidden;
-    // padding-bottom: 25.4%;
+    flex: 25%;
     overflow: hidden;
-    padding: .16rem .16rem;
+    margin-bottom: .08rem;
 
     &__img {
-      width: 100%;
+      width: calc(100% - .32rem);
+      margin-left: .16rem;
     }
     .title {
       text-align: center;
-      font-size: .16rem;
+      font-size: .14rem;
+      font-weight: normal;
       color: $content-fontcolor;
       @include ellipsis;
+    }
+  }
+}
+
+.nearby {
+  h3 {
+    font-size: .18rem;
+    font-weight: normal;
+    color: $content-fontcolor;
+    margin: .12rem 0;
+  }
+  &__item {
+    display: flex;
+    padding-top: .12rem;
+    &__img {
+      width: .64rem;
+      height: .64rem;
+      margin-right: .08rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__content {
+      flex: 1;
+      border-bottom: 1px solid #f1f1f1;
+
+      &__title {
+        font-size: .14rem;
+        font-weight: normal;
+        color: $content-fontcolor;
+      }
+      &__tags {
+        display: flex;
+        margin-top: .08rem;
+        font-size: .12rem;
+        font-weight: normal;
+        color: $content-fontcolor;
+        .nearby__item__content__tag {
+          flex:1;
+        }
+      }
+      &__highlight {
+        margin-top: .08rem;
+        margin-bottom: .08rem;
+        font-size: .12rem;
+        font-weight: normal;
+        color: red;
+      }
     }
   }
 }
@@ -190,6 +340,9 @@
 
     }
   }
+}
+.cl {
+  clear: both;
 }
 
 </style>
