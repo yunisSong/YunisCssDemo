@@ -275,6 +275,7 @@
       width: .64rem;
       height: .64rem;
       margin-right: .08rem;
+      margin-top: .06rem;
       img {
         width: 100%;
         height: 100%;
@@ -282,7 +283,7 @@
     }
     &__content {
       flex: 1;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid $bg-layer-color;
 
       &__title {
         font-size: .14rem;
@@ -319,7 +320,7 @@
   bottom: 0;
   width: 100%;
   height: .49rem;
-  border-top: .01rem #f1f1f1 solid;
+  border-top: .01rem $bg-layer-color solid;
   color: $content-fontcolor;
   &__item {
     flex: 1;
