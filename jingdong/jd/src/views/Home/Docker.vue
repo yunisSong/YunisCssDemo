@@ -34,8 +34,16 @@ export default {
   methods: {
     goToDashboard (index) {
       this.showIndex = index
-      console.log(index)
-      this.$router.push('/order')
+      switch (index) {
+        case 0:
+          this.$router.push('/')
+          break
+        case 1:
+          this.$router.push('/order')
+          break
+        default:
+          this.$router.push('/')
+      }
     }
   }
 }

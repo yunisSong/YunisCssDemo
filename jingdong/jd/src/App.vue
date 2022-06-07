@@ -1,11 +1,14 @@
 <template>
-  <Home />
+  <!-- <Home /> -->
+  <router-view />
+  <Docker />
 </template>
 
 <script>
-import Home from './views/Home/Home.vue'
+// import Home from './views/Home/Home.vue'
+import Docker from './views/Home/Docker.vue'
 export default {
   name: 'App',
-  components: { Home }
+  components: { Docker }
 }
 </script>

@@ -8,17 +8,15 @@
     <StaticArea />
     <Nearby />
   </div>
-  <Docker />
 </template>
 
 <script>
-import Docker from './Docker.vue'
 import Nearby from './Nearby.vue'
 import StaticArea from './StaticArea.vue'
 
 export default {
   name: 'Home',
-  components: { Docker, Nearby, StaticArea }
+  components: { Nearby, StaticArea }
 }
 </script>
 

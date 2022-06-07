@@ -17,7 +17,8 @@
         v-for="(item,index) in goodsList"
         :key="index"
       >
-        <div class="img"><img class="goods__item__img" :src="item.imageURL" alt="" ></div>
+        <!-- <div class="img"></div> -->
+        <img class="goods__item__img" :src="item.imageURL" alt="" />
         <div class="title"> {{ item.title + index }} </div>
       </div>
     </div>
@@ -106,12 +107,17 @@ export default {
   width: 100%;
   &__item {
     flex: 25%;
+    position: relative;
     overflow: hidden;
     margin-bottom: .08rem;
+    text-align: center;
 
     &__img {
-      width: calc(100% - .32rem);
-      margin-left: .16rem;
+      width: .36rem;
+      height: .36rem;
+      // margin: 0 auto;
+      // width: calc(100% - .32rem);
+      // margin-left: .16rem;
     }
     .title {
       text-align: center;
