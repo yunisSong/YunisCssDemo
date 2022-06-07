@@ -2,8 +2,10 @@
   <div class="docker">
     <div
       v-for="(item,index) in dockerList"
-      :class="{ 'docker__item': true, 'docker__item--active': index === 0}"
+      :class="{ 'docker__item': true, 'docker__item--active': showIndex === index}"
       :key="item.text"
+      v-on:click="goToDashboard(index)"
+
       >
       <div class="iconfont" v-html="item.icon"></div>
       <div class="title">{{ item.text }}</div>
@@ -15,6 +17,11 @@
 <script>
 export default {
   name: 'Docker',
+  data () {
+    return {
+      showIndex: 0
+    }
+  },
   setup () {
     const dockerList = [
       { icon: '&#xe7a7;', text: '首页' },
@@ -23,6 +30,13 @@ export default {
       { icon: '&#xe78b;', text: '我的' }
     ]
     return { dockerList }
+  },
+  methods: {
+    goToDashboard (index) {
+      this.showIndex = index
+      console.log(index)
+      this.$router.push('/order')
+    }
   }
 }
 </script>
