@@ -8,11 +8,14 @@
     <StaticArea />
     <Nearby />
   </div>
+  <Docker />
+
 </template>
 
 <script>
 import Nearby from './Nearby.vue'
 import StaticArea from './StaticArea.vue'
+// import Docker from './Docker.vue'
 
 export default {
   name: 'Home',
@@ -20,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../style/variable.scss';
 @import '../../style/mixins.scss';
 .wrapper {

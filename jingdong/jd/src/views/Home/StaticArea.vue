@@ -1,27 +1,27 @@
 <template>
-      <div class="position">
-      <span class="iconfont position__adress">&#xe7f1;</span>
-      <span class="">深圳市南山区高西南11道国实大厦</span>
-      <span class="iconfont position__notice">&#xe60b;</span>
+  <div class="position">
+    <span class="iconfont position__adress">&#xe7f1;</span>
+    <span class="">深圳市南山区高西南11道国实大厦</span>
+    <span class="iconfont position__notice">&#xe60b;</span>
+  </div>
+  <div class="search">
+    <span class="iconfont">&#xe6ac;</span>
+    <input class="search__input" type="text" placeholder="撒打发士大夫撒打发斯蒂芬地方撒">
+  </div>
+  <div class="banner">
+    <img class="banner__img" src="http://www.dell-lee.com/imgs/vue3/banner.jpg" alt="" >
+  </div>
+  <div class="goods">
+    <div
+      class="goods__item"
+      v-for="(item,index) in goodsList"
+      :key="index"
+    >
+      <!-- <div class="img"></div> -->
+      <img class="goods__item__img" :src="item.imageURL" alt="" />
+      <div class="title"> {{ item.title + index }} </div>
     </div>
-    <div class="search">
-      <span class="iconfont">&#xe6ac;</span>
-      <input class="search__input" type="text" placeholder="撒打发士大夫撒打发斯蒂芬地方撒">
-    </div>
-    <div class="banner">
-      <img class="banner__img" src="http://www.dell-lee.com/imgs/vue3/banner.jpg" alt="" >
-    </div>
-    <div class="goods">
-      <div
-        class="goods__item"
-        v-for="(item,index) in goodsList"
-        :key="index"
-      >
-        <!-- <div class="img"></div> -->
-        <img class="goods__item__img" :src="item.imageURL" alt="" />
-        <div class="title"> {{ item.title + index }} </div>
-      </div>
-    </div>
+  </div>
 </template>
 
 <script>
