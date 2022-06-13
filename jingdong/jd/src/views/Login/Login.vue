@@ -7,24 +7,40 @@
      <div class="wrapper__div">
       <input class="wrapper__div__input" type="text" placeholder="请输入密码">
     </div>
-    <div class="wrapper__button" @click="login">登录</div>
+    <div class="wrapper__button" @click="sylogin">登录</div>
     <div class="wrapper__register">忘记密码</div>
   </div>
 </template>
 
 <script>
-import router from '../../router'
+// import router from '../../router'
+import { post } from '../../utils/post'
 
 export default {
   name: 'Login',
   setup () {
-    const login = () => {
-      console.log('login')
-      localStorage.isLogin = true
-      router.push({ name: 'Home' })
+    const sylogin = () => {
+      console.log('登录')
+      post('/user/login?responseId=730899', {
+        username: 'Yunis',
+        password: 'pwd'
+      }).then((res) => {
+        console.log(res.data)
+      }).catch((err) => {
+        console.log(err)
+      })
+      // localStorage.isLogin = true
+      // router.push({ name: 'Home' })
     }
-    return { login }
+    return { sylogin }
   }
+  // methods: {
+  //   sylogin () {
+  //     console.log('登录')
+  //     post('/user/login')
+  //     console.log('login')
+  //   }
+  // }
 }
 </script>
 
