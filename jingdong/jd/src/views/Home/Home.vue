@@ -15,11 +15,11 @@
 <script>
 import Nearby from './Nearby.vue'
 import StaticArea from './StaticArea.vue'
-// import Docker from './Docker.vue'
+import Docker from './Docker.vue'
 
 export default {
   name: 'Home',
-  components: { Nearby, StaticArea }
+  components: { Nearby, StaticArea, Docker }
 }
 </script>
 

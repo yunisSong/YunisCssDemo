@@ -13,7 +13,7 @@
 </template>
 
 <script>
-// import router from '../../router'
+import router from '../../router'
 import { post } from '../../utils/post'
 
 export default {
@@ -29,8 +29,8 @@ export default {
       }).catch((err) => {
         console.log(err)
       })
-      // localStorage.isLogin = true
-      // router.push({ name: 'Home' })
+      localStorage.isLogin = true
+      router.push({ name: 'Home' })
     }
     return { sylogin }
   }
