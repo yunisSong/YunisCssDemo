@@ -1,9 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home/Home.vue'
-import Order from '../views/Order/Order.vue'
-import Login from '../views/Login/Login.vue'
+// import Home from '../views/Home/Home.vue'
+// import Order from '../views/Order/Order.vue'
+// import Login from '../views/Login/Login.vue'
 // () => import(/* webpackChunkName: "about" */ '../views/About.vue')
 // const Order = () => import(/* webpackChunkName: "about" */ '../views/Order/Order.vue')
+const Home = () => import(/* webpackChunkName: "Home" */ '../views/Home/Home.vue')
+const Order = () => import(/* webpackChunkName: "Order" */ '../views/Order/Order.vue')
+const Login = () => import(/* webpackChunkName: "Login" */ '../views/Login/Login.vue')
+
 const routes = [
   {
     path: '/',
