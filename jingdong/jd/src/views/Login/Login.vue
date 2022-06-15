@@ -2,10 +2,10 @@
   <div class="wrapper">
     <div class="wrapper__img"><img src="http://www.dell-lee.com/imgs/vue3/user.png" alt=""></div>
     <div class="wrapper__div">
-      <input class="wrapper__div__input" type="text" placeholder="请输入用户名">
+      <input class="wrapper__div__input" type="text" placeholder="请输入用户名" v-model="loginData.username">
     </div>
      <div class="wrapper__div">
-      <input class="wrapper__div__input" type="text" placeholder="请输入密码">
+      <input class="wrapper__div__input" type="text" placeholder="请输入密码" v-model="loginData.password">
     </div>
     <div class="wrapper__button" @click="sylogin">登录</div>
     <div class="wrapper__register">忘记密码</div>
@@ -16,31 +16,30 @@
 import router from '../../router'
 import { post } from '../../utils/post'
 
+export const loginEfficiency = () => {
+  const loginData = {
+    username: '',
+    password: ''
+  }
+  const sylogin = () => {
+    console.log('登录')
+    post('/user/login?responseId=730899', loginData).then((res) => {
+      console.log(res.data)
+    }).catch((err) => {
+      console.log(err)
+    })
+    localStorage.isLogin = true
+    router.push({ name: 'Home' })
+  }
+  return { loginData, sylogin }
+}
+
 export default {
   name: 'Login',
   setup () {
-    const sylogin = () => {
-      console.log('登录')
-      post('/user/login?responseId=730899', {
-        username: 'Yunis',
-        password: 'pwd'
-      }).then((res) => {
-        console.log(res.data)
-      }).catch((err) => {
-        console.log(err)
-      })
-      localStorage.isLogin = true
-      router.push({ name: 'Home' })
-    }
-    return { sylogin }
+    const { loginData, sylogin } = loginEfficiency()
+    return { loginData, sylogin }
   }
-  // methods: {
-  //   sylogin () {
-  //     console.log('登录')
-  //     post('/user/login')
-  //     console.log('login')
-  //   }
-  // }
 }
 </script>
 

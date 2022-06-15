@@ -1,6 +1,6 @@
 <template>
   <div
-      class="shop"
+      class="shop"  @click="showDetail(item)"
     >
       <div class="shop__img"><img :src="item.imageURL" alt=""></div>
       <div class="shop__content"
@@ -23,7 +23,13 @@
 <script>
 export default {
   name: 'ShopInfo',
-  props: ['item', 'hiddenBorder']
+  props: ['item', 'hiddenBorder'],
+  methods: {
+    showDetail (sitem) {
+      console.log('jjjjj ', sitem)
+      this.$router.push({ name: 'Shop', params: { item: encodeURIComponent(JSON.stringify(sitem)) } })
+    }
+  }
 }
 </script>
 

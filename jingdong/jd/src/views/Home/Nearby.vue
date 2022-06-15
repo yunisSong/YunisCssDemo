@@ -18,7 +18,7 @@ export default {
     const nearbyList = [
       {
         id: 1,
-        title: '沃尔玛22221',
+        title: '沃尔玛-Yunis',
         imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
         tags: ['月售1万+', '月售1万+', '月售1万+'],
         description: 'VIP尊享沙拉酱看到发票离开家士大夫'
