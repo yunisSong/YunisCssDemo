@@ -12,6 +12,82 @@
       </div>
     </div>
     <ShopInfoVue :item="data.shopItem" :hiddenBorder="true" />
+    <div class="shopList">
+      <div class="shopList__category">
+        <div class="shopList__category__title shopList__category__title--active">全部</div>
+        <div class="shopList__category__title">百货</div>
+        <div class="shopList__category__title">蔬菜</div>
+        <div class="shopList__category__title">烟酒</div>
+        <div class="shopList__category__title">考拉</div>
+        <div class="shopList__category__title">水电费</div>
+      </div>
+      <div class="goods">
+        <div class="shopList__goodsinfo">
+          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
+          <div class="shopList__goodsinfo__content">
+          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
+          <div class="shopList__goodsinfo__content__sale">月售100份</div>
+          <div class="shopList__goodsinfo__content__bottomNumView">
+            <span>￥</span>
+            <span>33.6</span>
+            <span>￥</span>
+            <span>46.8</span>
+            <span>-</span>
+            <span>88</span>
+            <span>+</span>
+          </div>
+          </div>
+         </div>
+         <div class="shopList__goodsinfo">
+          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
+          <div class="shopList__goodsinfo__content">
+          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
+          <div class="shopList__goodsinfo__content__sale">月售100份</div>
+          <div class="shopList__goodsinfo__content__bottomNumView">
+            <span>￥</span>
+            <span>33.6</span>
+            <span>￥</span>
+            <span>46.8</span>
+            <span>-</span>
+            <span>88</span>
+            <span>+</span>
+          </div>
+          </div>
+         </div>
+         <div class="shopList__goodsinfo">
+          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
+          <div class="shopList__goodsinfo__content">
+          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
+          <div class="shopList__goodsinfo__content__sale">月售100份</div>
+          <div class="shopList__goodsinfo__content__bottomNumView">
+            <span>￥</span>
+            <span>33.6</span>
+            <span>￥</span>
+            <span>46.8</span>
+            <span>-</span>
+            <span>88</span>
+            <span>+</span>
+          </div>
+          </div>
+         </div>
+         <div class="shopList__goodsinfo">
+          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
+          <div class="shopList__goodsinfo__content">
+          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
+          <div class="shopList__goodsinfo__content__sale">月售100份</div>
+          <div class="shopList__goodsinfo__content__bottomNumView">
+            <span>￥</span>
+            <span>33.6</span>
+            <span>￥</span>
+            <span>46.8</span>
+            <span>-</span>
+            <span>88</span>
+            <span>+</span>
+          </div>
+          </div>
+         </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -44,7 +120,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  padding: .08rem .18rem;
+  padding: .08rem .18rem 0 .18rem;
 }
 .search {
   display: flex;
@@ -55,11 +131,11 @@ export default {
     top: .02rem;
     font-size: .2rem;
     width: .4rem;
-    height: .32rem;
+    line-height: .32rem;
   }
   &__content {
     flex: 1;
-    margin-bottom: .16rem;
+    // margin-bottom: .16rem;
     background-color: #f5f5f5;
     border-radius: .16rem;
     padding: 0 .16rem;
@@ -80,5 +156,69 @@ export default {
     }
   }
 
+}
+.shopList {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.5rem;
+  bottom: .5rem;
+  display: flex;
+  &__category {
+    overflow-y: auto;
+    height: 100%;
+    width: 1.2rem;
+    background-color: #b7b7b7;
+    &__title {
+      text-align: center;
+      font-size: .14rem;
+      color: #333;
+      line-height: .42rem;
+      width: 100%;
+      &--active {
+        background: #f5f5f5;
+      }
+    }
+  }
+  .goods {
+    display: block;
+     flex: 1;
+  }
+  &__goodsinfo {
+    // flex: 1;
+    display: flex;
+    // background-color: #f5f5f5;
+    height: .80rem;
+    padding-left: .12rem;
+    &__img {
+      margin-top: .08rem;
+      margin-right: .12rem;
+      width: .64rem;
+      height: .64rem;
+    }
+    &__content {
+      flex: 1;
+      height: .80rem;
+      border-bottom: 1px #F1F1F1 solid;
+
+          //   <div class="shopList__goodsinfo__content__title"></div>
+          // <div class="shopList__goodsinfo__content__sale"></div>
+          // <div class="shopList__goodsinfo__content__bottomNumView"></div>
+      &__title {
+        padding-top: .08rem;
+        font-size: .14rem;
+        color:#333;
+        line-height: .22rem;
+      }
+      &__sale {
+        font-size: .12rem;
+        line-height: .22rem;
+      }
+      &__bottomNumView {
+        font-size: .14rem;
+        line-height: .22rem;
+      }
+    }
+  }
 }
 </style>
