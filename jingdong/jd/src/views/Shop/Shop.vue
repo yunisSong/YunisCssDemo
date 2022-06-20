@@ -27,7 +27,7 @@
           <div class="shopList__goodsinfo__content">
           <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
           <div class="shopList__goodsinfo__content__sale">月售100份</div>
-          <ProdectPriceVue :price="100" :originalPrice="200.00" />
+          <ProdectPriceVue :price="100.01" :originalPrice="200.01" />
           <div class="shopList__goodsinfo__content__bottomNumView">
             <!-- <child @handleChange="changeName"></child> -->
             <ProdectCountVue :count='data.count'  @handleSub="subCount" @handleAdd="addCount" />
@@ -164,7 +164,7 @@ export default {
     }
     &__content {
       flex: 1;
-      height: .80rem;
+      height: 1.0rem;
       border-bottom: 1px #F1F1F1 solid;
       position:relative;
       margin-right: .16rem;
