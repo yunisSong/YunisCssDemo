@@ -9,7 +9,6 @@
     <Nearby />
   </div>
   <Docker />
-
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="search">
-      <div class="search__back iconfont">&#xe6ac;</div>
+      <div class="search__back iconfont" @click="back">&#xe6ac;</div>
       <div class="search__content">
         <span class="search__content__icon iconfont">&#xe6ac;</span>
         <input
@@ -27,62 +27,10 @@
           <div class="shopList__goodsinfo__content">
           <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
           <div class="shopList__goodsinfo__content__sale">月售100份</div>
+          <ProdectPriceVue :price="100" :originalPrice="200.00" />
           <div class="shopList__goodsinfo__content__bottomNumView">
-            <span>￥</span>
-            <span>33.6</span>
-            <span>￥</span>
-            <span>46.8</span>
-            <span>-</span>
-            <span>88</span>
-            <span>+</span>
-          </div>
-          </div>
-         </div>
-         <div class="shopList__goodsinfo">
-          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
-          <div class="shopList__goodsinfo__content">
-          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
-          <div class="shopList__goodsinfo__content__sale">月售100份</div>
-          <div class="shopList__goodsinfo__content__bottomNumView">
-            <span>￥</span>
-            <span>33.6</span>
-            <span>￥</span>
-            <span>46.8</span>
-            <span>-</span>
-            <span>88</span>
-            <span>+</span>
-          </div>
-          </div>
-         </div>
-         <div class="shopList__goodsinfo">
-          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
-          <div class="shopList__goodsinfo__content">
-          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
-          <div class="shopList__goodsinfo__content__sale">月售100份</div>
-          <div class="shopList__goodsinfo__content__bottomNumView">
-            <span>￥</span>
-            <span>33.6</span>
-            <span>￥</span>
-            <span>46.8</span>
-            <span>-</span>
-            <span>88</span>
-            <span>+</span>
-          </div>
-          </div>
-         </div>
-         <div class="shopList__goodsinfo">
-          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
-          <div class="shopList__goodsinfo__content">
-          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
-          <div class="shopList__goodsinfo__content__sale">月售100份</div>
-          <div class="shopList__goodsinfo__content__bottomNumView">
-            <span>￥</span>
-            <span>33.6</span>
-            <span>￥</span>
-            <span>46.8</span>
-            <span>-</span>
-            <span>88</span>
-            <span>+</span>
+            <!-- <child @handleChange="changeName"></child> -->
+            <ProdectCountVue :count='data.count'  @handleSub="subCount" @handleAdd="addCount" />
           </div>
           </div>
          </div>
@@ -94,14 +42,17 @@
 <script>
 import { reactive } from 'vue'
 import ShopInfoVue from '../../components/ShopInfo.vue'
+import ProdectCountVue from '../../components/ProdectCount.vue'
+import ProdectPriceVue from '../../components/ProdectPrice.vue'
 export default {
   name: 'Shop',
-  components: { ShopInfoVue },
+  components: { ShopInfoVue, ProdectCountVue, ProdectPriceVue },
   setup () {
     // 这样修改 shopItem 才能做到响应式修改。
     const data = reactive({
       shopItem: {},
-      searchKey: ''
+      searchKey: '',
+      count: 0
     })
     return { data }
   },
@@ -109,6 +60,19 @@ export default {
     showDetail (sitem) {
       console.log('jjjjj ', sitem)
       this.$router.push({ name: 'Shop', params: { item: sitem } })
+    },
+    back () {
+      this.$router.back()
+    },
+    subCount () {
+      console.log('减去')
+      this.data.count -= 1
+      console.log(this.data.count)
+    },
+    addCount () {
+      console.log('加上')
+      this.data.count += 1
+      console.log(this.data.count)
     }
   },
   mounted () {
@@ -119,6 +83,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../style/mixins.scss';
+
 .wrapper {
   padding: .08rem .18rem 0 .18rem;
 }
@@ -182,7 +148,7 @@ export default {
   }
   .goods {
     display: block;
-     flex: 1;
+    flex: 1;
   }
   &__goodsinfo {
     // flex: 1;
@@ -200,6 +166,9 @@ export default {
       flex: 1;
       height: .80rem;
       border-bottom: 1px #F1F1F1 solid;
+      position:relative;
+      margin-right: .16rem;
+      overflow: hidden;
 
           //   <div class="shopList__goodsinfo__content__title"></div>
           // <div class="shopList__goodsinfo__content__sale"></div>
@@ -209,14 +178,19 @@ export default {
         font-size: .14rem;
         color:#333;
         line-height: .22rem;
+         overflow: hidden;
+        @include ellipsis;
       }
       &__sale {
         font-size: .12rem;
         line-height: .22rem;
       }
       &__bottomNumView {
-        font-size: .14rem;
-        line-height: .22rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        // font-size: .14rem;
+        // line-height: .22rem;
       }
     }
   }
