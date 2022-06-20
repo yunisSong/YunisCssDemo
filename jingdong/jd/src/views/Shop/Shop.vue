@@ -7,31 +7,35 @@
         <input
         class="search__content__input"
         placeholder="请输入商品进行搜索"
-        v-model="data.searchKey"
+        v-model="searchKey"
         />
       </div>
     </div>
-    <ShopInfoVue :item="data.shopItem" :hiddenBorder="true" />
+    <ShopInfoVue :item="shopItem" :hiddenBorder="true" />
     <div class="shopList">
       <div class="shopList__category">
-        <div class="shopList__category__title shopList__category__title--active">全部</div>
-        <div class="shopList__category__title">百货</div>
-        <div class="shopList__category__title">蔬菜</div>
-        <div class="shopList__category__title">烟酒</div>
-        <div class="shopList__category__title">考拉</div>
-        <div class="shopList__category__title">水电费</div>
+        <div
+        v-for="category in categoryList"
+        :key="category.title"
+        :class="{'shopList__category__title':true, 'shopList__category__title--active':category.show}"
+        @click="showCategory(category)"
+        >
+          {{category.title}}
+        </div>
       </div>
-      <div class="goods">
-        <div class="shopList__goodsinfo">
-          <img class="shopList__goodsinfo__img" :src="data.shopItem.imageURL"/>
+
+      <div class="goods" >
+        <div class="shopList__goodsinfo"
+             v-for="prodectItem in prodectItems"
+             :key="prodectItem.title">
+          <img class="shopList__goodsinfo__img" :src="prodectItem.imageURL"/>
           <div class="shopList__goodsinfo__content">
-          <div class="shopList__goodsinfo__content__title">番茄250g/份</div>
-          <div class="shopList__goodsinfo__content__sale">月售100份</div>
-          <ProdectPriceVue :price="100.01" :originalPrice="200.01" />
-          <div class="shopList__goodsinfo__content__bottomNumView">
-            <!-- <child @handleChange="changeName"></child> -->
-            <ProdectCountVue :count='data.count'  @handleSub="subCount" @handleAdd="addCount" />
-          </div>
+            <div class="shopList__goodsinfo__content__title">{{prodectItem.title}}</div>
+            <div class="shopList__goodsinfo__content__sale">月售{{prodectItem.sales}}份</div>
+            <ProdectPriceVue :price="prodectItem.price" :originalPrice="prodectItem.originalPrice" />
+            <div class="shopList__goodsinfo__content__bottomNumView">
+              <ProdectCountVue :item='prodectItem'  @handleSub="subCount" @handleAdd="addCount" />
+            </div>
           </div>
          </div>
       </div>
@@ -40,21 +44,74 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+// import { reactive } from 'vue'
 import ShopInfoVue from '../../components/ShopInfo.vue'
 import ProdectCountVue from '../../components/ProdectCount.vue'
 import ProdectPriceVue from '../../components/ProdectPrice.vue'
 export default {
   name: 'Shop',
   components: { ShopInfoVue, ProdectCountVue, ProdectPriceVue },
-  setup () {
-    // 这样修改 shopItem 才能做到响应式修改。
-    const data = reactive({
+  data () {
+    return {
       shopItem: {},
       searchKey: '',
-      count: 0
-    })
-    return { data }
+      count: 0,
+      categoryList: [
+        { title: '百货1', show: true },
+        { title: '百货2', show: false },
+        { title: '百货3', show: false },
+        { title: '百货4', show: false },
+        { title: '百货5', show: false },
+        { title: '百货6', show: false },
+        { title: '百货7', show: false },
+        { title: '百货8', show: false },
+        { title: '百货9', show: false },
+        { title: '百货10', show: false }
+      ],
+      currentShow: {},
+      prodectItems: [
+        {
+          imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
+          title: '的盛世嫡妃',
+          sales: '100',
+          price: '100.1',
+          originalPrice: '230.5',
+          sycount: 1
+        },
+        {
+          imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
+          title: '的盛世嫡妃',
+          sales: '300',
+          price: '500.1',
+          originalPrice: '230.5',
+          sycount: 1
+        },
+        {
+          imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
+          title: '的盛世嫡妃',
+          sales: '66',
+          price: '90',
+          originalPrice: '230.5',
+          sycount: 2
+        },
+        {
+          imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
+          title: '的盛世嫡妃',
+          sales: '34',
+          price: '178.1',
+          originalPrice: '230.5',
+          sycount: 1
+        },
+        {
+          imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png',
+          title: '的盛世嫡妃',
+          sales: '78',
+          price: '100.1',
+          originalPrice: '230.5',
+          sycount: 4
+        }
+      ]
+    }
   },
   methods: {
     showDetail (sitem) {
@@ -64,20 +121,33 @@ export default {
     back () {
       this.$router.back()
     },
-    subCount () {
+    subCount (item) {
       console.log('减去')
-      this.data.count -= 1
-      console.log(this.data.count)
+      item.sycount -= 1
+      console.log(item.sycount)
     },
-    addCount () {
+    addCount (item) {
       console.log('加上')
-      this.data.count += 1
-      console.log(this.data.count)
+      item.sycount += 1
+      console.log(item.sycount)
+    },
+    showCategory (category) {
+      if (category.show) {
+        this.currentShow = category
+        return -1
+      }
+      category.show = true
+      this.currentShow.show = false
+      this.currentShow = category
+      // request prodectItems data
     }
   },
+  created () {
+    this.currentShow = this.categoryList[0]
+  },
   mounted () {
-    this.data.shopItem = JSON.parse(decodeURIComponent(this.$route.params.item))
-    console.log('传值为： ', this.data.shopItem)
+    this.shopItem = JSON.parse(decodeURIComponent(this.$route.params.item))
+    console.log('传值为： ', this.shopItem)
   }
 }
 </script>
@@ -125,11 +195,11 @@ export default {
 }
 .shopList {
   position: absolute;
+  display: flex;
   left: 0;
   right: 0;
   top: 1.5rem;
   bottom: .5rem;
-  display: flex;
   &__category {
     overflow-y: auto;
     height: 100%;
@@ -154,7 +224,7 @@ export default {
     // flex: 1;
     display: flex;
     // background-color: #f5f5f5;
-    height: .80rem;
+    height: 1.0rem;
     padding-left: .12rem;
     &__img {
       margin-top: .08rem;
@@ -164,7 +234,7 @@ export default {
     }
     &__content {
       flex: 1;
-      height: 1.0rem;
+      height: 100%;
       border-bottom: 1px #F1F1F1 solid;
       position:relative;
       margin-right: .16rem;

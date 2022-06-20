@@ -2,16 +2,16 @@
   <div class="count">
     <div
     class="circular-border sub"
-    :class="{'hidden':count > 0 ? false : true}"
+    :class="{'hidden':item.sycount > 0 ? false : true}"
     @click="handleSub"
     >
     -
     </div>
 
     <div class="num"
-    :class="{'hidden':count > 0 ? false : true}"
+    :class="{'hidden':item.sycount > 0 ? false : true}"
     >
-      {{ count }}
+      {{ item.sycount }}
     </div>
 
     <div class="circular-border add" @click="handleAdd">+</div>
@@ -22,19 +22,14 @@
 <script>
 export default {
   name: 'ProdectCount',
-  props: ['count'],
+  props: ['item'],
   methods: {
-    //             <ProdectCountVue :count="count"  @handleSub="subCount" @handleAdd="addCount" />
-
-    showDetail (sitem) {
-      console.log('jjjjj ', sitem)
-      this.$router.push({ name: 'Shop', params: { item: encodeURIComponent(JSON.stringify(sitem)) } })
-    },
     handleSub () {
-      this.$emit('handleSub', 'Jack')
+      console.log(this.item.count)
+      this.$emit('handleSub', this.item)
     },
     handleAdd () {
-      this.$emit('handleAdd', 'Jack')
+      this.$emit('handleAdd', this.item)
     }
   }
 }
