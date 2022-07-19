@@ -1,6 +1,6 @@
 
 <template>
-<!--
+  <!--
   BEM 命名规则 b：block e：element m：Modifier
   docker 后面跟两个底部下划线(__)表示子节点，两个中横线(--)表示的是节点的状态。
   -->
@@ -30,10 +30,9 @@ export default {
   left: 0;
   right: 0;
   top: 0;
-  bottom: .5rem;
-  font-size: .12rem;
-  padding: .08rem .18rem;
+  bottom: 0.5rem;
+  font-size: 0.12rem;
+  padding: 0.08rem 0.18rem;
   overflow-y: auto;
-
 }
 </style>

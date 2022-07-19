@@ -1,0 +1,306 @@
+.box {
+  width: 80vw;
+  height: 200px;
+  background-color: bisque;
+  margin: 10px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+}
+
+h4 {
+  text-align: center;
+}
+
+.typography {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  word-break: break-word;
+  border-radius: 2px;
+  overflow-x: auto;
+  background-color: #fff5f5;
+  color: #ff502c;
+  font-size: 1em;
+  padding: 0.065em 0.4em;
+  line-height: 1.2;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+}
+
+/* 
+  flex gap 
+  设置间隔 
+*/
+.flex-gap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.flex-gap>div {
+  background: #506ee4;
+  color: #fff;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* grid + place-items 垂直水平居中 */
+
+.grid-wrapper {
+  display: grid;
+  /* height: 20vh; */
+  height: 200px;
+  background-color: #efefef;
+}
+
+.center-block {
+  display: grid;
+  place-items: center;
+}
+
+
+/* flex + margin  垂直水平居中 */
+
+.grid-wrapper1 {
+  display: grid;
+  /* height: 200px; */
+  height: 100%;
+  background-color: #efefef;
+}
+
+.center-block1 {
+  margin: auto;
+}
+
+/* 
+  文本拆分为列显示
+  这个属性允许将文本拆分为列，
+  column-count 属性指定列数，
+  column-gap 设置列间间隙，
+  column-rule 设置列间垂直线的样式。
+  而 columns 是 column-count 和 column-width 的简写属性。
+ */
+.p_column {
+  margin: 1em;
+  column-count: 4;
+  column-gap: 2em;
+  column-rule: 1px dotted #506ee4;
+  line-height: 1.6;
+  text-align: justify;
+
+
+}
+
+/* 
+  inline-flex
+  此属性允许创建具有 Flexbox 功能的内联元素
+ */
+
+span {
+  width: 2.5em;
+  height: 2.5em;
+  /* --inline-flex设置开始-- */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* --inline-flex设置结束-- */
+  background: #506ee4;
+  box-shadow: 0 7px 14px 0 rgb(0 4 68 / 50%);
+  font-size: 1.2rem;
+  outline: 1px dashed #fff;
+  outline-offset: -5px;
+}
+
+/* 
+  filter
+
+*/
+
+.theme {
+  cursor: pointer;
+}
+
+.theme:checked+.typography1 {
+  filter: invert();
+}
+
+.typography1 {
+  margin: 1em;
+  padding: 1em;
+  background: #506ee4;
+  border-radius: 4px;
+  color: #fbfbfb;
+  transition: 0.2s ease-in;
+  line-height: 2;
+}
+
+/* 
+  drop-shadow 
+  filter 的 drop-shadow() 属性与 box-shadow 属性不同，
+  它在应用效果方面类似，
+  允许向图像本身添加阴影，而不是给它所在的框添加阴影。
+*/
+
+.logo-box-shadow,
+.logo-drop-shadow {
+  display: inline-flex;
+  margin: 2em 2em;
+  width: 8em;
+  height: 8em;
+  padding: 1em;
+}
+
+.logo-box-shadow img,
+.logo-drop-shadow img {
+  width: 100%
+}
+
+.logo-box-shadow {
+  box-shadow: 0 7px 14px 0 #ff0000;
+}
+
+.logo-drop-shadow {
+  filter: drop-shadow(0 7px 14px #ff0000);
+}
+
+/* 
+  object-fit
+  object-fit 属性控制被替换元素（如 img 和 video）的长宽比（如果它们有宽度或高度）以及缩放过程。
+  例如，scale-down 值可以保持图像的宽高比，而不用考虑框的大小：
+*/
+
+img {
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  /*  --开始object-fit属性设置--  */
+  object-fit: scale-down;
+  /*  --结束object-fit属性设置--  */
+  border: 1px dashed #506ee4;
+  border-radius: 20px;
+}
+
+/* 
+  cursor
+  改变鼠标样式
+*/
+
+.image {
+  cursor: url("https://pics.freeicons.io/uploads/icons/png/20278001131579606320-32.png"), auto;
+}
+
+.svg {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='../img/W3C.svg' width='40' height='40' viewport='0 0 100 100' style='fill:black;font-size:22px;'><text y='50%'> </text></svg>"), auto;
+}
+
+/* 
+  background-clip
+*/
+
+.p_clip {
+  font-family: "Bungee", cursive;
+  font-size: 8rem;
+  color: transparent;
+  font-weight: bolder;
+  /* --开始background-clip设置-- */
+  background-image: url("../img/main.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* --结束background-clip设置-- */
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* 
+  background-repeat
+  background-repeat 属性设置图像填充背景的顺序，
+  round 值将图像均匀地分布在容器的整个宽度上，
+  而space值则在图像之间添加少量填充  
+*/
+.box1 {
+  height: auto;
+  flex-direction: column;
+}
+
+.block {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 100px;
+}
+
+.block::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 64px;
+  font-size: 20px;
+  text-transform: Capitalize;
+}
+
+.block div {
+  width: 360px;
+  height: 64px;
+  background-image: url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
+  margin-bottom: 30px;
+}
+
+.repeat::before {
+  content: "repeat";
+}
+
+.round::before {
+  content: "round";
+}
+
+.space::before {
+  content: "space";
+}
+
+.repeat div {
+  background-repeat: repeat;
+}
+
+.round div {
+  background-repeat: round;
+}
+
+.space div {
+  background-repeat: space;
+}
+
+/* 
+  ::marker
+  通常使用 list-style: none 删除列表标记，
+  并使用 ::before 或 ::after 伪元素添加自定义的标记。
+  现在有一种更简单的方法可以做到这一点就是使用 ::marker 伪元素。
+*/
+
+
+li::marker {
+  content: "✔ ";
+  color: green;
+}
+
+li:last-child::marker {
+  content: "✖ ";
+  color: red;
+}
+
+/* 
+  ::selection
+  ::selection 伪元素用来设置文本选择的样式。
+ */
+
+p::selection {
+  background-color: #ff0000;
+  color: #fff;
+}

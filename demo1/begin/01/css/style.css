@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* display: block; */
+  list-style: none;
+  /* text-align: left; */
+  width: auto;
+  height: auto;
+}
+
+body {
+  font-family: Helvetica Neue, PingFang SC, Microsoft YaHei;
+  font-size: 14px;
+  line-height: 1.6;
+  color: black;
+  background: #F5F6F7;
+  width: 100%;
+  min-width: 960px;
+  overflow-y: auto;
+}
+
+title {
+  display: none;
+}
+
+.nav {
+  height: 60px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  margin: 0 140px 0 0;
+  height: 55px;
+  width: 60px;
+
+}
+
+.site_bar {
+  margin: auto 0;
+  height: 60px;
+  width: 600px;
+  float: left;
+}
+
+.site_bar ul li {
+  float: left;
+}
+
+.site_bar li a {
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  line-height: 60px;
+  display: inline-block;
+}
+
+.site_bar li a:hover {
+  background-color: dimgrey;
+  color: white;
+}
+
+.banner {
+  clear: both;
+  width: 100%;
+  height: 520px;
+  margin: 0;
+  min-width: 960px;
+  background-color: #14191D;
+}
+
+.banner img {
+  min-width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+
+.content {
+  width: 960px;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  display: flex;
+  overflow: hidden;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  transition: all 0.1s;
+
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.help {
+  flex: 1;
+  padding: 10px;
+  background: white;
+
+  text-align: center;
+  position: relative;
+}
+
+.cotent_text {
+  text-align: left;
+}
+
+.help img {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.help a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  font-size: 16px;
+  color: #B92E26;
+  text-decoration: none;
+
+}
+
+.content_bottom {
+  margin-top: 20px;
+}
+
+
+
+.content_bottom .list {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: left;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 220px;
+  column-gap: 42px;
+  row-gap: 20px;
+  transition: all 1s;
+}
+
+.content_bottom .card {
+  width: 200px;
+  height: 220px;
+  background-color: aqua;
+  display: flex;
+  overflow: hidden;
+  margin-right: 40px;
+  margin-bottom: 20px;
+
+}
+
+.content_bottom .help {
+  padding: 0;
+}
+
+.content_bottom img {
+  width: 100%;
+  height: auto;
+  /* height: 100px; */
+  display: block;
+
+}
+
+/*
+ <div class="content_bottom">
+<div class="title">我们有那些内容</div>
+<div class="grid">
+  <div class="card">
+    <div class="help">
+      <img src="./img/share1.png" alt="" />
+      <div class="title">行业见闻</div>
+      <div class="tips">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <div class="numbs">
+        <span><img src="./img/eye.png" alt="" /></span>
+        <span>98.8w</span>
+      </div>
+    </div>
+  </div>
+
+*/
+
+.content_bottom .title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 15px 15px;
+}
+
+.content_bottom .tips {
+  margin-left: 15px;
+  font-size: 12px;
+
+  display: inline-block;
+}
+
+.content_bottom .numbs {
+  margin-right: 15px;
+  height: 25px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.content_bottom .numbs span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+
+}
+
+.content_bottom .numbs img {
+  display: inline-block;
+  width: 25px;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flex_site {
+  width: 960px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.flex_site .sites {
+  margin: 0 auto;
+}
+
+.flex_site .logo {
+  margin: 0;
+  height: 55px;
+  width: 60px;
+}
+
+.flex_site .sites ul {
+  flex: 1;
+
+  display: flex;
+}
+
+.flex_site .sites li {
+  display: block;
+  flex: 1;
+  /* width: 100px;
+  height: 60px;
+  line-height: 60px; */
+  text-align: center;
+}
+
+.flex_site .sites li a {
+  display: block;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.flex_site .sites li a:hover {
+  background-color: dimgrey;
+  color: white;
+}
+
+.footer {
+  clear: both;
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+
+}
+
+.column {
+  width: 100px;
+  flex: 1;
+  /* 居中对齐 */
+}
+
+.box {
+  width: 260px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  margin-top: 10px;
+  background-color: #ffa500;
+  clip-path: polygon(15% 0%, 0% 50%, 15% 100%, 85% 100%, 100% 50%, 85% 0%);
+}
+
+.content {
+  padding: 40px;
+}

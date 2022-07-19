@@ -6,41 +6,55 @@
   </div>
   <div class="search">
     <span class="iconfont">&#xe6ac;</span>
-    <input class="search__input" type="text" placeholder="撒打发士大夫撒打发斯蒂芬地方撒">
+    <input
+      class="search__input"
+      type="text"
+      placeholder="撒打发士大夫撒打发斯蒂芬地方撒"
+    />
   </div>
   <div class="banner">
-    <img class="banner__img" src="http://www.dell-lee.com/imgs/vue3/banner.jpg" alt="" >
+    <img
+      class="banner__img"
+      src="http://www.dell-lee.com/imgs/vue3/banner.jpg"
+      alt=""
+    />
   </div>
   <div class="goods">
-    <div
-      class="goods__item"
-      v-for="(item,index) in goodsList"
-      :key="index"
-    >
+    <div class="goods__item" v-for="(item, index) in goodsList" :key="index">
       <!-- <div class="img"></div> -->
       <img class="goods__item__img" :src="item.imageURL" alt="" />
-      <div class="title"> {{ item.title + index }} </div>
+      <div class="title">{{ item.title + index }}</div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'StaticArea',
-  setup () {
-    const goodsList = [
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
-      { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' }
-    ]
-    return { goodsList }
-  }
-}
+<script setup>
+// export default {
+//   name: 'StaticArea',
+//   setup() {
+//     const goodsList = [
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+//       { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' }
+//     ]
+//     return { goodsList }
+//   }
+// }
+const goodsList = [
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' },
+  { imageURL: 'http://www.dell-lee.com/imgs/vue3/超市.png', title: '图书' }
+]
 </script>
 
 <style lang="scss" scoped>
@@ -49,42 +63,42 @@ export default {
 
 .position {
   position: relative;
-  line-height: .22rem;
-  padding: .16rem;
+  line-height: 0.22rem;
+  padding: 0.16rem;
   padding-left: 0;
-  font-size: .16rem;
+  font-size: 0.16rem;
   color: $content-fontcolor;
   @include ellipsis;
 
   &__adress {
-    margin-right: .05rem;
-    font-size: .2rem;
+    margin-right: 0.05rem;
+    font-size: 0.2rem;
   }
   &__notice {
     position: absolute;
     right: 0;
-    font-size: .2rem;
+    font-size: 0.2rem;
   }
 }
 
 .search {
-  margin-bottom: .16rem;
-  line-height: .32rem;
+  margin-bottom: 0.16rem;
+  line-height: 0.32rem;
   background-color: #f5f5f5;
-  border-radius: .16rem;
-  padding: 0 .16rem;
-  font-size: .14rem;
+  border-radius: 0.16rem;
+  padding: 0 0.16rem;
+  font-size: 0.14rem;
   color: #b7b7b7;
   .iconfont {
     position: relative;
-    top: .02rem;
-    font-size: .2rem;
+    top: 0.02rem;
+    font-size: 0.2rem;
   }
   &__input {
     border: none;
     outline: none;
     background-color: #f5f5f5;
-    width: calc(100% - (.2rem + .16rem));
+    width: calc(100% - (0.2rem + 0.16rem));
   }
 }
 
@@ -94,7 +108,7 @@ export default {
   height: 0;
   overflow: hidden;
   padding-bottom: 25.4%;
-  margin-bottom: .16rem;
+  margin-bottom: 0.16rem;
   &__img {
     width: 100%;
   }
@@ -109,19 +123,19 @@ export default {
     flex: 25%;
     position: relative;
     overflow: hidden;
-    margin-bottom: .08rem;
+    margin-bottom: 0.08rem;
     text-align: center;
 
     &__img {
-      width: .36rem;
-      height: .36rem;
+      width: 0.36rem;
+      height: 0.36rem;
       // margin: 0 auto;
       // width: calc(100% - .32rem);
       // margin-left: .16rem;
     }
     .title {
       text-align: center;
-      font-size: .14rem;
+      font-size: 0.14rem;
       font-weight: normal;
       color: $content-fontcolor;
       @include ellipsis;
